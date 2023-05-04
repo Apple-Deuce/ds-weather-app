@@ -1,7 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import { BsGrid3X3GapFill } from 'react-icons/bs'
 import axios from 'axios'
 import {useState} from 'react'
 import {BsSearch} from 'react-icons/bs'
@@ -28,8 +26,6 @@ export default function Home() {
   const[location, setLocation] = useState('')
   const [weather, setWeather] = useState({})
   const [loading, setLoading] = useState(false)
-
-  const url = `https://api.weather.gov/points/${location}`
 
   const fetchWeather = async (e) => {
     e.preventDefault()
